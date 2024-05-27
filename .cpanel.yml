@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/neincbpp/public_html/
+    - /bin/rsync -av clases/ $DEPLOYPATH
+    - /bin/rsync -av procesos/ $DEPLOYPATH
+    - /bin/rsync -av public/ $DEPLOYPATH
+    - /bin/rsync -av vistas/ $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp .cpanel.yml $DEPLOYPATH
